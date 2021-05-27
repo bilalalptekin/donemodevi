@@ -44,6 +44,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +55,7 @@
             this.pictureBox1.Image = global::_131730026_Bilal_Alptekib_donemsonuodv.Properties.Resources.registerbackground;
             this.pictureBox1.Location = new System.Drawing.Point(-9, -9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(812, 464);
+            this.pictureBox1.Size = new System.Drawing.Size(812, 553);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -87,11 +89,11 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label2.Location = new System.Drawing.Point(302, 185);
+            this.label2.Location = new System.Drawing.Point(319, 185);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 25);
+            this.label2.Size = new System.Drawing.Size(155, 25);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Buraya İsminizi Girin";
+            this.label2.Text = "Soyisminizi Girin";
             // 
             // tbxSurname
             // 
@@ -109,17 +111,18 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.Location = new System.Drawing.Point(302, 267);
+            this.label3.Location = new System.Drawing.Point(333, 267);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 25);
+            this.label3.Size = new System.Drawing.Size(126, 25);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Buraya İsminizi Girin";
+            this.label3.Text = "Şifrenizi Girin";
             // 
             // tbxPassword
             // 
             this.tbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.tbxPassword.Location = new System.Drawing.Point(257, 261);
             this.tbxPassword.Name = "tbxPassword";
+            this.tbxPassword.PasswordChar = '*';
             this.tbxPassword.Size = new System.Drawing.Size(279, 36);
             this.tbxPassword.TabIndex = 13;
             this.tbxPassword.Enter += new System.EventHandler(this.tbxPassword_Enter);
@@ -131,11 +134,11 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label4.Location = new System.Drawing.Point(302, 226);
+            this.label4.Location = new System.Drawing.Point(295, 226);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(188, 25);
+            this.label4.Size = new System.Drawing.Size(202, 25);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Buraya İsminizi Girin";
+            this.label4.Text = "E-mail Adresinizi Girin";
             // 
             // tbxEmail
             // 
@@ -153,11 +156,11 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label6.Location = new System.Drawing.Point(302, 309);
+            this.label6.Location = new System.Drawing.Point(290, 309);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(188, 25);
+            this.label6.Size = new System.Drawing.Size(212, 25);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Buraya İsminizi Girin";
+            this.label6.Text = "Kimlik Numaranızı Girin";
             // 
             // tbxIdentityNumber
             // 
@@ -185,11 +188,11 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label7.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label7.Location = new System.Drawing.Point(302, 144);
+            this.label7.Location = new System.Drawing.Point(336, 144);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(188, 25);
+            this.label7.Size = new System.Drawing.Size(121, 25);
             this.label7.TabIndex = 20;
-            this.label7.Text = "Buraya İsminizi Girin";
+            this.label7.Text = "İsminizi Girin";
             // 
             // comboBox1
             // 
@@ -221,12 +224,40 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Mesleğinizi Seçin";
             // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.btnRegister.Location = new System.Drawing.Point(257, 450);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(279, 82);
+            this.btnRegister.TabIndex = 23;
+            this.btnRegister.Text = "Üye Ol";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.SkyBlue;
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.checkBox1.Location = new System.Drawing.Point(266, 400);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(263, 33);
+            this.checkBox1.TabIndex = 24;
+            this.checkBox1.Text = "Kredi Kartı İstiyorum";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            // 
             // registerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 541);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label7);
@@ -270,5 +301,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

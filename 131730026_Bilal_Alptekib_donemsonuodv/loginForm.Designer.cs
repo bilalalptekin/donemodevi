@@ -68,6 +68,7 @@
             // btnGiris
             // 
             this.btnGiris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnGiris.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.btnGiris.Location = new System.Drawing.Point(103, 387);
             this.btnGiris.Margin = new System.Windows.Forms.Padding(0);

@@ -65,5 +65,10 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
         {
             enter(label6);
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

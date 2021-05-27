@@ -8,5 +8,7 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.DOMAIN
 {
     class CreditCard
     {
+        private decimal maxCredit;
+        private string creditCardNumber;
     }
 }

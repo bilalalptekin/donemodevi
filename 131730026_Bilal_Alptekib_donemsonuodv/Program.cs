@@ -16,7 +16,7 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loginForm());
+            Application.Run(new mainForm());
         }
     }
 }
