@@ -101,6 +101,7 @@
             this.Name = "sendMoney";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+
             this.ResumeLayout(false);
             this.PerformLayout();
 

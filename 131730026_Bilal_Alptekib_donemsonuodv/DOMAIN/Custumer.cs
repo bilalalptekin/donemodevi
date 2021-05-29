@@ -29,6 +29,34 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.DOMAIN
         public BankCard BankCard { get => bankCard; set => bankCard = value; }
         public string IdentityNumber { get => identityNumber; set => identityNumber = value; }
         public string Job { get => job; set => job = value; }
-        internal CreditCard CreditCard { get => creditCard; set => creditCard = value; }
+        public CreditCard CreditCard { get => creditCard; set => creditCard = value; }
+    
+        public Custumer(int id,string name,string surname,string mail,string password,string iban,string identityNumber,string job,CreditCard creditCard,BankCard bankCard)
+        {
+            this.id = id;
+            this.name = name;
+            this.surname = surname;
+            this.mail = mail;
+            this.password = password;
+            this.iban = iban;
+            this.identityNumber = identityNumber;
+            this.job = job;
+            this.creditCard = creditCard;
+            this.bankCard = bankCard;
+        }
+        public Custumer(string name, string surname, string mail, string password, string iban, string identityNumber, string job, CreditCard creditCard, BankCard bankCard)
+        {
+            
+            this.name = name;
+            this.surname = surname;
+            this.mail = mail;
+            this.password = password;
+            this.iban = iban;
+            this.identityNumber = identityNumber;
+            this.job = job;
+            this.creditCard = creditCard;
+            this.bankCard = bankCard;
+        }
+
     }
 }

@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace _131730026_Bilal_Alptekib_donemsonuodv
 {
-    public partial class sendMoney : Form
+    public partial class takeCredit : Form
     {
-        public sendMoney()
+        public takeCredit()
         {
             InitializeComponent();
         }
-
-        private void btnGonder_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-     
     }
 }

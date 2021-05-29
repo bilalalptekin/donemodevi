@@ -38,7 +38,8 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lnlIsimSoyisim = new System.Windows.Forms.Label();
+            this.lblIban = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -122,7 +123,7 @@
             this.toolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(189, 28);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(224, 28);
             this.toolStripMenuItem2.Text = "Kredi Çek";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -131,19 +132,29 @@
             this.toolStripMenuItem3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem3.Image")));
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(189, 28);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(224, 28);
             this.toolStripMenuItem3.Text = "Para Gönder";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
-            // label1
+            // lnlIsimSoyisim
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(12, 294);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 29);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "E-Mail:";
+            this.lnlIsimSoyisim.AutoSize = true;
+            this.lnlIsimSoyisim.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lnlIsimSoyisim.Location = new System.Drawing.Point(12, 282);
+            this.lnlIsimSoyisim.Name = "lnlIsimSoyisim";
+            this.lnlIsimSoyisim.Size = new System.Drawing.Size(165, 29);
+            this.lnlIsimSoyisim.TabIndex = 15;
+            this.lnlIsimSoyisim.Text = "İsim Soyisim:";
+            // 
+            // lblIban
+            // 
+            this.lblIban.AutoSize = true;
+            this.lblIban.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblIban.Location = new System.Drawing.Point(12, 330);
+            this.lblIban.Name = "lblIban";
+            this.lblIban.Size = new System.Drawing.Size(85, 29);
+            this.lblIban.TabIndex = 16;
+            this.lblIban.Text = "IBAN: ";
             // 
             // mainForm
             // 
@@ -151,7 +162,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1193, 525);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblIban);
+            this.Controls.Add(this.lnlIsimSoyisim);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.menuStrip1);
@@ -179,6 +191,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lnlIsimSoyisim;
+        private System.Windows.Forms.Label lblIban;
     }
 }
