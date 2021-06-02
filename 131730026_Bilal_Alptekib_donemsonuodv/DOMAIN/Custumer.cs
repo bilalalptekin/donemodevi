@@ -19,6 +19,7 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.DOMAIN
         //private string image; 
         private CreditCard creditCard;
         private BankCard bankCard;
+       
 
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
@@ -30,8 +31,19 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.DOMAIN
         public string IdentityNumber { get => identityNumber; set => identityNumber = value; }
         public string Job { get => job; set => job = value; }
         public CreditCard CreditCard { get => creditCard; set => creditCard = value; }
-    
-        public Custumer(int id,string name,string surname,string mail,string password,string iban,string identityNumber,string job,CreditCard creditCard,BankCard bankCard)
+
+        public Custumer(string name, string surname, string mail, string password, string iban, string identityNumber, string job)
+        {
+            
+            this.name = name;
+            this.surname = surname;
+            this.mail = mail;
+            this.password = password;
+            this.iban = iban;
+            this.identityNumber = identityNumber;
+            this.job = job;
+        }
+            public Custumer(int id,string name,string surname,string mail,string password,string iban,string identityNumber,string job,CreditCard creditCard,BankCard bankCard)
         {
             this.id = id;
             this.name = name;
@@ -44,7 +56,20 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.DOMAIN
             this.creditCard = creditCard;
             this.bankCard = bankCard;
         }
-        public Custumer(string name, string surname, string mail, string password, string iban, string identityNumber, string job, CreditCard creditCard, BankCard bankCard)
+        public Custumer(string name, string surname, string mail, string password, string iban, string identityNumber, string job,BankCard bankCard) /*CreditCard creditCard, BankCard bankCard)*/
+        {
+            
+            this.name = name;
+            this.surname = surname;
+            this.mail = mail;
+            this.password = password;
+            this.iban = iban;
+            this.identityNumber = identityNumber;
+            this.job = job;
+            this.bankCard = bankCard;
+            
+        }
+        public Custumer( string name, string surname, string mail, string password, string iban, string identityNumber, string job, CreditCard creditCard, BankCard bankCard)
         {
             
             this.name = name;
@@ -57,6 +82,12 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.DOMAIN
             this.creditCard = creditCard;
             this.bankCard = bankCard;
         }
+        public Custumer(string mail, string password)
+        {
+            this.mail = mail;
+            this.password = password;   
+        }
 
+        
     }
 }

@@ -87,6 +87,7 @@
             this.label2.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Enabled = false;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label2.Location = new System.Drawing.Point(319, 185);
@@ -109,6 +110,7 @@
             this.label3.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Enabled = false;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label3.Location = new System.Drawing.Point(333, 267);
@@ -132,6 +134,7 @@
             this.label4.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Enabled = false;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label4.Location = new System.Drawing.Point(295, 226);
@@ -154,6 +157,7 @@
             this.label6.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Enabled = false;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label6.Location = new System.Drawing.Point(290, 309);
@@ -186,6 +190,7 @@
             this.label7.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Enabled = false;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label7.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label7.Location = new System.Drawing.Point(336, 144);
@@ -196,8 +201,8 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Bankacı",
             "Doktor",
@@ -215,9 +220,10 @@
             // 
             this.label5.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.BackColor = System.Drawing.Color.Gainsboro;
+            this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(314, 351);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(164, 25);
@@ -299,9 +305,9 @@
         private System.Windows.Forms.TextBox tbxIdentityNumber;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

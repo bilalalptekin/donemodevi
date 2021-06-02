@@ -36,3 +36,12 @@ C:\Users\bilal\source\repos\131730026_Bilal_Alptekib_donemsonuodv\131730026_Bila
 C:\Users\bilal\source\repos\131730026_Bilal_Alptekib_donemsonuodv\131730026_Bilal_Alptekib_donemsonuodv\obj\Debug\_131730026_Bilal_Alptekib_donemsonuodv.sendMoney.resources
 C:\Users\bilal\source\repos\131730026_Bilal_Alptekib_donemsonuodv\131730026_Bilal_Alptekib_donemsonuodv\obj\Debug\_131730026_Bilal_Alptekib_donemsonuodv.changePassword.resources
 C:\Users\bilal\source\repos\131730026_Bilal_Alptekib_donemsonuodv\131730026_Bilal_Alptekib_donemsonuodv\obj\Debug\_131730026_Bilal_Alptekib_donemsonuodv.takeCredit.resources
+C:\Users\bilal\source\repos\131730026_Bilal_Alptekib_donemsonuodv\131730026_Bilal_Alptekib_donemsonuodv\bin\Debug\LiveCharts.dll
+C:\Users\bilal\source\repos\131730026_Bilal_Alptekib_donemsonuodv\131730026_Bilal_Alptekib_donemsonuodv\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\bilal\source\repos\131730026_Bilal_Alptekib_donemsonuodv\131730026_Bilal_Alptekib_donemsonuodv\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\bilal\source\repos\131730026_Bilal_Alptekib_donemsonuodv\131730026_Bilal_Alptekib_donemsonuodv\bin\Debug\LiveCharts.pdb
+C:\Users\bilal\source\repos\131730026_Bilal_Alptekib_donemsonuodv\131730026_Bilal_Alptekib_donemsonuodv\bin\Debug\LiveCharts.xml
+C:\Users\bilal\source\repos\131730026_Bilal_Alptekib_donemsonuodv\131730026_Bilal_Alptekib_donemsonuodv\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\bilal\source\repos\131730026_Bilal_Alptekib_donemsonuodv\131730026_Bilal_Alptekib_donemsonuodv\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\bilal\source\repos\131730026_Bilal_Alptekib_donemsonuodv\131730026_Bilal_Alptekib_donemsonuodv\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\bilal\source\repos\131730026_Bilal_Alptekib_donemsonuodv\131730026_Bilal_Alptekib_donemsonuodv\bin\Debug\LiveCharts.Wpf.xml

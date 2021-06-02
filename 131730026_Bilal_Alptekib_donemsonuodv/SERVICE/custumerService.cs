@@ -1,5 +1,7 @@
-﻿using _131730026_Bilal_Alptekib_donemsonuodv.DOMAIN;
+﻿using _131730026_Bilal_Alptekib_donemsonuodv.DAL;
+using _131730026_Bilal_Alptekib_donemsonuodv.DOMAIN;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +11,44 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.SERVICE
 {
     class custumerService
     {
-        internal void saveCustumer(Custumer custumer)
+        internal void saveCustumerWithCreditCard(Custumer custumer,BankCard bankCard,CreditCard creditCard)
         {
+            string name = custumer.Name;
+            string surname = custumer.Surname;
+            string mail = custumer.Mail;
+            string passwword = custumer.Password;
+            string iban = custumer.Iban;
+            string job = custumer.Job;
+            string identity = custumer.IdentityNumber;
+            decimal balance = bankCard.Balance;
+            string cardNumber = bankCard.CardNumber;
+            int cvv = bankCard.Cvv;
+            DateTime valThu = bankCard.ValidityDate;
+            decimal maxCredit = creditCard.MaxCredit;
+            string creditrCardNumber = creditCard.CreditCardNumber;
 
+            (new custumerDAO()).saveCustumuerwithcreditcard(new Custumer(name, surname,mail,passwword,iban,identity,job,creditCard,bankCard),(new BankCard(iban,balance,cvv,cardNumber,valThu)),new CreditCard(iban,maxCredit,creditrCardNumber));
         }
+        internal void saveCustumerWithoutCreditCard(Custumer custumer,BankCard bankCard)
+        {
+            string name = custumer.Name;
+            string surname = custumer.Surname;
+            string mail = custumer.Mail;
+            string passwword = custumer.Password;
+            string iban = custumer.Iban;
+            string job = custumer.Job;
+            string identity = custumer.IdentityNumber;
+            decimal balance = bankCard.Balance;
+            string cardNumber = bankCard.CardNumber;
+            int cvv = bankCard.Cvv;
+            DateTime valThu = bankCard.ValidityDate;
+
+            (new custumerDAO()).saveCustumuerwithoutcreditcard(new Custumer(name, surname, mail, passwword, iban, identity, job,bankCard), (new BankCard(iban, balance, cvv, cardNumber, valThu)));
+        }
+        internal bool login(Custumer custumer)
+        {
+           return (new custumerDAO()).login(custumer);
+        }
+    
     }
 }
