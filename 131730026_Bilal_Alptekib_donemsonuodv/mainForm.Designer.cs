@@ -39,7 +39,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.lnlIsimSoyisim = new System.Windows.Forms.Label();
+            this.lblIsimSoyisim = new System.Windows.Forms.Label();
             this.lblIban = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.ibanlbl = new System.Windows.Forms.Label();
@@ -95,6 +95,7 @@
             this.çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
             this.çıkışYapToolStripMenuItem.Size = new System.Drawing.Size(235, 28);
             this.çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
+            this.çıkışYapToolStripMenuItem.Click += new System.EventHandler(this.çıkışYapToolStripMenuItem_Click);
             // 
             // lblEmail
             // 
@@ -136,7 +137,7 @@
             this.toolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(189, 28);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(224, 28);
             this.toolStripMenuItem2.Text = "Kredi Çek";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -145,19 +146,19 @@
             this.toolStripMenuItem3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem3.Image")));
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(189, 28);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(224, 28);
             this.toolStripMenuItem3.Text = "Para Gönder";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
-            // lnlIsimSoyisim
+            // lblIsimSoyisim
             // 
-            this.lnlIsimSoyisim.AutoSize = true;
-            this.lnlIsimSoyisim.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lnlIsimSoyisim.Location = new System.Drawing.Point(12, 282);
-            this.lnlIsimSoyisim.Name = "lnlIsimSoyisim";
-            this.lnlIsimSoyisim.Size = new System.Drawing.Size(165, 29);
-            this.lnlIsimSoyisim.TabIndex = 15;
-            this.lnlIsimSoyisim.Text = "İsim Soyisim:";
+            this.lblIsimSoyisim.AutoSize = true;
+            this.lblIsimSoyisim.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblIsimSoyisim.Location = new System.Drawing.Point(12, 282);
+            this.lblIsimSoyisim.Name = "lblIsimSoyisim";
+            this.lblIsimSoyisim.Size = new System.Drawing.Size(165, 29);
+            this.lblIsimSoyisim.TabIndex = 15;
+            this.lblIsimSoyisim.Text = "İsim Soyisim:";
             // 
             // lblIban
             // 
@@ -172,6 +173,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(535, 322);
@@ -210,7 +212,7 @@
             this.Controls.Add(this.ibanlbl);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblIban);
-            this.Controls.Add(this.lnlIsimSoyisim);
+            this.Controls.Add(this.lblIsimSoyisim);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.menuStrip1);
@@ -239,7 +241,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.Label lnlIsimSoyisim;
+        private System.Windows.Forms.Label lblIsimSoyisim;
         private System.Windows.Forms.Label lblIban;
         private System.Windows.Forms.ToolStripMenuItem çıkışYapToolStripMenuItem;
         private System.Windows.Forms.Button button1;

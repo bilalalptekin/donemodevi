@@ -87,7 +87,10 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.DOMAIN
             this.mail = mail;
             this.password = password;   
         }
+        public Custumer()
+        {
 
+        }
         
     }
 }

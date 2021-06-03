@@ -16,14 +16,17 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
 {
     public partial class mainForm : Form
     {
-        public mainForm()
-        {
-            InitializeComponent();
-        }
-        //public mainForm()
-        //{
 
-        //}
+        Custumer custumer; 
+
+        public mainForm(Custumer cs)
+
+        {
+            custumer = cs;
+            //loadGraph();
+            InitializeComponent();
+            //loadGraph();
+        }
         private void hesapÖzetiÇıkartToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -31,7 +34,18 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-
+           
+            if (custumer.CreditCard.CreditCardNumber != null)
+            {
+                takeCredit tc = new takeCredit(custumer);
+                tc.ShowDialog();
+                //this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Kredi Kartınız Yok Kredi Çekemezsiniz");
+            }
+            
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
@@ -42,7 +56,7 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
 
         private void şifreDeğiştirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            changePassword changePassword = new changePassword();
+            changePassword changePassword = new changePassword(custumer);
             changePassword.ShowDialog();
         }
 
@@ -55,25 +69,36 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
 
         private void mainForm_Load(object sender, EventArgs e)
         {
-            pieChartGraphic.LegendLocation = LiveCharts.LegendLocation.Bottom;
+            
             loadGraph();
-
+            ibanlbl.Text = custumer.Iban;
+            lblEmail.Text = $"E mail: {custumer.Mail}";
+            lblIsimSoyisim.Text = $"İsim Soyisim: {custumer.Name} {custumer.Surname}";
         }
         private void loadGraph()
         {
-            ArrayList bilal = new ArrayList{500,100,250};
-            Func<ChartPoint, string> func = x => string.Format("{0},{1:P}", x.Y, x.Participation);
+            pieChartGraphic.LegendLocation = LegendLocation.Bottom;
+            ArrayList bilal = new ArrayList{custumer.BankCard.Balance,custumer.CreditCard.MaxCredit,};
+            Func<ChartPoint, string> func = x => string.Format("{0},{1:P}", x.Y, x.Participation);            
+            ArrayList textler = new ArrayList { "Bakiye", "Çekebileceğiniz Maximum Kredi" };      
             SeriesCollection series = new SeriesCollection();
+            int i = 0;
             foreach (var item in bilal)
             {
                 PieSeries pie = new PieSeries();
-                pie.Title = "bilal";
-                pie.Values = new ChartValues<int> { Convert.ToInt32(item) };
+                pie.Title = textler[i].ToString();
+                i++;
+                pie.Values = new ChartValues<decimal> { Convert.ToDecimal(item) };
                 pie.DataLabels = true;
                 pie.LabelPoint = func;
                 series.Add(pie);
                 pieChartGraphic.Series = series;
             }
+        }
+
+        private void çıkışYapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainForm.ActiveForm.Close();
         }
     }
 }

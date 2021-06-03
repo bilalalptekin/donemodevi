@@ -23,6 +23,9 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.DOMAIN
             this.maxCredit = maxCredit;
             this.creditCardNumber = creditCardNumber;
         }
+        public CreditCard()
+        {
 
+        }
     }
 }

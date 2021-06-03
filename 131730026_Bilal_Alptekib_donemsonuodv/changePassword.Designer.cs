@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(changePassword));
             this.btnGonder = new System.Windows.Forms.Button();
-            this.tbxAmount = new System.Windows.Forms.TextBox();
+            this.tbxSıfre2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbxIban = new System.Windows.Forms.TextBox();
+            this.tbxSıfre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -45,20 +45,20 @@
             this.btnGonder.UseVisualStyleBackColor = false;
             this.btnGonder.Click += new System.EventHandler(this.btnGonder_Click);
             // 
-            // tbxAmount
+            // tbxSıfre2
             // 
-            resources.ApplyResources(this.tbxAmount, "tbxAmount");
-            this.tbxAmount.Name = "tbxAmount";
+            resources.ApplyResources(this.tbxSıfre2, "tbxSıfre2");
+            this.tbxSıfre2.Name = "tbxSıfre2";
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // tbxIban
+            // tbxSıfre
             // 
-            resources.ApplyResources(this.tbxIban, "tbxIban");
-            this.tbxIban.Name = "tbxIban";
+            resources.ApplyResources(this.tbxSıfre, "tbxSıfre");
+            this.tbxSıfre.Name = "tbxSıfre";
             // 
             // label1
             // 
@@ -70,9 +70,9 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnGonder);
-            this.Controls.Add(this.tbxAmount);
+            this.Controls.Add(this.tbxSıfre2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbxIban);
+            this.Controls.Add(this.tbxSıfre);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -86,9 +86,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnGonder;
-        private System.Windows.Forms.TextBox tbxAmount;
+        private System.Windows.Forms.TextBox tbxSıfre2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbxIban;
+        private System.Windows.Forms.TextBox tbxSıfre;
         private System.Windows.Forms.Label label1;
     }
 }

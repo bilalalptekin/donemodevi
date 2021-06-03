@@ -11,7 +11,7 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.DAL
     {
         public MySqlConnection getConnection()
         {
-            MySqlConnection connection = new MySqlConnection("Server=localhost; Database=131730026proje; uid=bilalalptekin;pwd=123456;");
+            MySqlConnection connection = new MySqlConnection("Server=localhost; Database=131730026proje; uid=bilalalptekin;pwd=123456; convert zero datetime=True;");
             connection.Open();
             return connection;
 

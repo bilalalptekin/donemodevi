@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace _131730026_Bilal_Alptekib_donemsonuodv.SERVICE
 {
@@ -45,10 +46,17 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.SERVICE
 
             (new custumerDAO()).saveCustumuerwithoutcreditcard(new Custumer(name, surname, mail, passwword, iban, identity, job,bankCard), (new BankCard(iban, balance, cvv, cardNumber, valThu)));
         }
-        internal bool login(Custumer custumer)
+        internal Custumer login(string mail,string sifre)
         {
-           return (new custumerDAO()).login(custumer);
+           return (new custumerDAO()).login(mail,sifre);
         }
-    
+        internal void ChangePassword(Custumer custumer)
+        {
+            (new custumerDAO()).updatePassword(custumer);
+        }
+        internal void takeCredit(Custumer custumer,Decimal tutar)
+        {
+            (new custumerDAO()).takeCredit(custumer,tutar);
+        }
     }
 }

@@ -45,6 +45,7 @@
             this.btnCek.TabIndex = 23;
             this.btnCek.Text = "Para Çek";
             this.btnCek.UseVisualStyleBackColor = false;
+            this.btnCek.Click += new System.EventHandler(this.btnCek_Click);
             // 
             // tbxTutar
             // 

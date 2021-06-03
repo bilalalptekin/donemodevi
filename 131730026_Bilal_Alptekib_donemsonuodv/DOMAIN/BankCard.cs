@@ -28,6 +28,9 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.DOMAIN
             this.cardNumber = cardNumber;
             this.validityDate = validityDate;
         }
+        public BankCard()
+        {
 
+        }
     }
 }

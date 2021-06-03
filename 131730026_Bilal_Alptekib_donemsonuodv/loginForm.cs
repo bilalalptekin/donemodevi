@@ -15,6 +15,7 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
 {
     public partial class loginForm : Form
     {
+        
         public loginForm()
         {
             InitializeComponent();
@@ -34,15 +35,17 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
         private void Login()
         {
             //ArrayList degerler = new ArrayList();
-            Custumer custumer = new Custumer(textBox1.Text,textBox2.Text);
+            Custumer custumer = new Custumer();
             custumerService cs = new custumerService();
-
+            cs.login(textBox1.Text, textBox2.Text);
+            custumer = cs.login(textBox1.Text, textBox2.Text);
             //degerler.Add();
             try
             {
-                if (cs.login(custumer))//degerler[0].ToString()==custumer.Name&&degerler[1].ToString()==custumer.Surname)
+                if (custumer.Password==textBox2.Text&&custumer.Mail==textBox1.Text)//degerler[0].ToString()==custumer.Name&&degerler[1].ToString()==custumer.Surname)
                 {
-                    mainForm mF = new mainForm();
+                    
+                    mainForm mF = new mainForm(custumer);
                     mF.Show();
                     this.Hide();
                 }
@@ -60,6 +63,7 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
+
             Login();
         }
     }

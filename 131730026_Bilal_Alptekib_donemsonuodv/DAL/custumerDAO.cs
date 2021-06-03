@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace _131730026_Bilal_Alptekib_donemsonuodv.DAL
 {
@@ -24,27 +25,74 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.DAL
             (new MySqlCommand("insert into custumer(name,surname,mail,password,iban,id_number,job) values ('" + custumer.Name + "','" + custumer.Surname + "','" + custumer.Mail + "','" + custumer.Password + "','" + custumer.Iban + "','" + custumer.IdentityNumber + "','" + custumer.Job + "')", (new dbConnection()).getConnection())).ExecuteNonQuery();
 
         }
-        public bool login(Custumer custumer)
+        public void updatePassword(Custumer custumer)
         {
+            (new MySqlCommand("UPDATE custumer SET password='" + custumer.Password + "' where iban ='" + custumer.Iban + "'", (new dbConnection()).getConnection())).ExecuteNonQuery();
+        }
 
-            ArrayList emailandpassword = new ArrayList();
-           // MySqlDataReader read=(new MySqlCommand("SELECT * FROM custumer where mail='" + custumer.Mail + "' AND password='" + custumer.Password + "'", (new dbConnection()).getConnection())).ExecuteReader();
-            MySqlDataReader read = (new MySqlCommand("SELECT * FROM custumer where mail='" + custumer.Mail + "' AND password='" + custumer.Password + "'", (new dbConnection()).getConnection())).ExecuteReader();
-            //MySqlDataReader readbankCard = (new MySqlCommand("SELECT * FROM bank_card where iban='" + custumer.Iban + "'", (new dbConnection()).getConnection())).ExecuteReader();
-
+        public Custumer login(string tbxmail,string tbxpassword)
+        {
+            Custumer custumer = new Custumer();
+           
+            MySqlDataReader read = (new MySqlCommand("SELECT * FROM custumer where mail='" + tbxmail + "' AND password='" + tbxpassword + "'", (new dbConnection()).getConnection())).ExecuteReader();
+            BankCard _bankCard = new BankCard();
+            
             if (read.Read())
             {
-                //BankCard _bankCard = (new BankCard(readbankCard[0].ToString(), Convert.ToDecimal(readbankCard[1]), Convert.ToInt32(readbankCard[2]), readbankCard[3].ToString(), Convert.ToDateTime(readbankCard[4])));
+            
+                custumer.Id = Convert.ToInt32(read[0]);
+                custumer.Name = read[1].ToString();
+                custumer.Surname = read[2].ToString();
+                custumer.Mail = read[3].ToString();
+                custumer.Password = read[4].ToString();
+                custumer.Iban = read[5].ToString();
+                custumer.IdentityNumber = read[6].ToString();
+                custumer.Job = read[7].ToString();
 
-                                                   //id                        //name              //surname          //mail              //password         //iban           //id_number         //job
-                //emailandpassword.Add(new Custumer(/*Convert.ToInt32(read[0]),*/ read[1].ToString(),read[2].ToString(),read[3].ToString(),read[4].ToString(),read[5].ToString(),read[6].ToString(),read[7].ToString(),_bankCard));
-                return true;
+                MySqlDataReader readbankCard = (new MySqlCommand("SELECT * FROM bank_card where iban='" + custumer.Iban + "'", (new dbConnection()).getConnection())).ExecuteReader();
+
+                if (readbankCard.Read())
+                {
+                    _bankCard.Iban = readbankCard[0].ToString();
+                    _bankCard.Balance = Convert.ToDecimal(readbankCard[1]);
+                    _bankCard.Cvv = Convert.ToInt32(readbankCard[2]);
+                    _bankCard.CardNumber = readbankCard[3].ToString();
+                    _bankCard.ValidityDate = Convert.ToDateTime(readbankCard[4]);
+                }
+
+                MySqlDataReader readcreditCard = (new MySqlCommand("SELECT * FROM credit_card where iban='" + custumer.Iban + "'", (new dbConnection()).getConnection())).ExecuteReader();
+
+                CreditCard _creditCard = new CreditCard();
+
+                if (readcreditCard.Read())
+                {
+                    _creditCard.Iban = readcreditCard[0].ToString();
+                    _creditCard.MaxCredit = Convert.ToDecimal(readcreditCard[1]);
+                    _creditCard.CreditCardNumber = readcreditCard[2].ToString();
+                }
+                custumer.BankCard = _bankCard;
+                custumer.CreditCard = _creditCard;
+                return custumer;
             }
             else
-            {
-                return false;
+            {               
+                return custumer;         
             }
+        
         }
-        //public 
+        public void takeCredit(Custumer custumer,Decimal miktar)
+        {
+            if (custumer.CreditCard.MaxCredit >= miktar)
+            {
+                (new MySqlCommand("UPDATE bank_card SET balance='" + (custumer.BankCard.Balance + miktar) + "' where iban ='" + custumer.Iban + "'", (new dbConnection()).getConnection())).ExecuteNonQuery();
+                (new MySqlCommand("UPDATE credit_card SET max_credit='" + (custumer.CreditCard.MaxCredit - miktar) + "' where iban ='" + custumer.Iban + "'", (new dbConnection()).getConnection())).ExecuteNonQuery();
+            }
+
+
+        }
+        //public Custumer custumrReturn(Custumer custumer)
+        //{
+        //    return custumer;
+        //}
     }
 }
