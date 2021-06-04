@@ -27,6 +27,28 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
             InitializeComponent();
             //loadGraph();
         }
+        public mainForm(Custumer cs,decimal a)
+
+        {
+            //mainForm.ActiveForm.Close();
+            custumer = cs;
+            cs.BankCard.Balance += a;
+            cs.CreditCard.MaxCredit -= a;
+            
+            InitializeComponent();
+            //loadGraph();
+        }
+        public mainForm(decimal b, Custumer cs)
+
+        {
+            //mainForm.ActiveForm.Close();
+            custumer = cs;
+            cs.BankCard.Balance -= b;
+            
+
+            InitializeComponent();
+            //loadGraph();
+        }
         private void hesapÖzetiÇıkartToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -39,7 +61,7 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
             {
                 takeCredit tc = new takeCredit(custumer);
                 tc.ShowDialog();
-                //this.Close();
+                this.Close();
             }
             else
             {
@@ -49,8 +71,10 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
+            
         {
-            sendMoney sendMoney = new sendMoney();
+            Custumer custumerReciever = new Custumer();
+            sendMoney sendMoney = new sendMoney(custumer,custumerReciever);
             sendMoney.ShowDialog();
         }
 

@@ -28,16 +28,23 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
             custumerService custumerService = new custumerService();
             try
             {
+                
                 custumerService.takeCredit(custumer, Convert.ToDecimal(tbxTutar.Text));
-                custumer.BankCard.Balance = custumer.BankCard.Balance;
+                //custumer.BankCard.Balance = custumer.BankCard.Balance; bunu bi kontrol et neden bu kadar saçma bi kod yazdın
+                decimal a = (Convert.ToDecimal(tbxTutar.Text));
+                mainForm mainForm = new mainForm(custumer, a);
+                mainForm.Show();
+
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show($"Girdiğiniz Miktar Çekebileceğiniz max Kredi Tutarından Fazla {ex.Message}");
             }
-            mainForm mainForm = new mainForm(custumer);
-            mainForm.Show();
+           
+            
+            
+            //mainForm.Close();
             this.Close();
         }
     }

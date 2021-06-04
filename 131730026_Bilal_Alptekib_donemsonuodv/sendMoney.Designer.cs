@@ -54,7 +54,6 @@
             this.tbxAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.tbxAmount.Location = new System.Drawing.Point(121, 80);
             this.tbxAmount.Name = "tbxAmount";
-            this.tbxAmount.PasswordChar = '*';
             this.tbxAmount.Size = new System.Drawing.Size(279, 36);
             this.tbxAmount.TabIndex = 17;
             // 
@@ -101,7 +100,6 @@
             this.Name = "sendMoney";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-
             this.ResumeLayout(false);
             this.PerformLayout();
 

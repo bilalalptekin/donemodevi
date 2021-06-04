@@ -58,5 +58,9 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.SERVICE
         {
             (new custumerDAO()).takeCredit(custumer,tutar);
         }
+        internal void sendMoney(Custumer custumer,Custumer custumerReciever, Decimal tutar)
+        {
+            (new custumerDAO()).sendMoney(custumer,custumerReciever, tutar);
+        }
     }
 }

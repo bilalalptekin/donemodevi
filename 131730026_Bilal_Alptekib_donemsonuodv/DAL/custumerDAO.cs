@@ -90,6 +90,28 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.DAL
 
 
         }
+        public void sendMoney(Custumer custumer,Custumer custumerReceiver, Decimal miktar)
+        {
+            BankCard _bankCard = new BankCard();
+            MySqlDataReader readCustumerReciever = (new MySqlCommand("SELECT * FROM bank_card where iban='" + custumerReceiver.Iban + "'", (new dbConnection()).getConnection())).ExecuteReader();
+            
+            MySqlDataReader readbankCard = (new MySqlCommand("SELECT * FROM bank_card where iban='" + custumerReceiver.Iban + "'", (new dbConnection()).getConnection())).ExecuteReader();
+            
+
+            if (readCustumerReciever.Read())
+            {
+                
+                _bankCard.Balance = Convert.ToDecimal(readbankCard[1]);
+                custumerReceiver.BankCard = _bankCard;
+                (new MySqlCommand("UPDATE bank_card SET balance='" + (custumerReceiver.BankCard.Balance + miktar) + "' where iban ='" + custumerReceiver.Iban + "'", (new dbConnection()).getConnection())).ExecuteNonQuery();
+                
+                (new MySqlCommand("UPDATE bank_card SET balance='" + (custumer.BankCard.Balance - miktar) + "' where iban ='" + custumer.Iban + "'", (new dbConnection()).getConnection())).ExecuteNonQuery();
+
+                
+            }
+
+
+        }
         //public Custumer custumrReturn(Custumer custumer)
         //{
         //    return custumer;
