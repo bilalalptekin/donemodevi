@@ -51,7 +51,12 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
         }
         private void hesapÖzetiÇıkartToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            using (denemeForm deneme = new denemeForm(custumer))
+            {
+                deneme.ShowDialog();
+            }
+                
+            
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
@@ -76,6 +81,7 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
             Custumer custumerReciever = new Custumer();
             sendMoney sendMoney = new sendMoney(custumer,custumerReciever);
             sendMoney.ShowDialog();
+            this.Close();
         }
 
         private void şifreDeğiştirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -124,5 +130,7 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv
         {
             mainForm.ActiveForm.Close();
         }
+
+
     }
 }

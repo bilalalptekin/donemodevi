@@ -78,6 +78,7 @@
             this.hesapÖzetiÇıkartToolStripMenuItem.Name = "hesapÖzetiÇıkartToolStripMenuItem";
             this.hesapÖzetiÇıkartToolStripMenuItem.Size = new System.Drawing.Size(235, 28);
             this.hesapÖzetiÇıkartToolStripMenuItem.Text = "Hesap Özeti Çıkart";
+            this.hesapÖzetiÇıkartToolStripMenuItem.Click += new System.EventHandler(this.hesapÖzetiÇıkartToolStripMenuItem_Click);
             // 
             // şifreDeğiştirToolStripMenuItem
             // 
@@ -137,7 +138,7 @@
             this.toolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(224, 28);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(189, 28);
             this.toolStripMenuItem2.Text = "Kredi Çek";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -146,7 +147,7 @@
             this.toolStripMenuItem3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem3.Image")));
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(224, 28);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(189, 28);
             this.toolStripMenuItem3.Text = "Para Gönder";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 

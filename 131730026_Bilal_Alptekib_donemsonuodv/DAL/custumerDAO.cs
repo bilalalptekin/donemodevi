@@ -100,14 +100,17 @@ namespace _131730026_Bilal_Alptekib_donemsonuodv.DAL
 
             if (readCustumerReciever.Read())
             {
+
+                if (readbankCard.Read())
+                {
+                    _bankCard.Balance = Convert.ToDecimal(readbankCard[1]);
+                }
                 
-                _bankCard.Balance = Convert.ToDecimal(readbankCard[1]);
                 custumerReceiver.BankCard = _bankCard;
                 (new MySqlCommand("UPDATE bank_card SET balance='" + (custumerReceiver.BankCard.Balance + miktar) + "' where iban ='" + custumerReceiver.Iban + "'", (new dbConnection()).getConnection())).ExecuteNonQuery();
                 
                 (new MySqlCommand("UPDATE bank_card SET balance='" + (custumer.BankCard.Balance - miktar) + "' where iban ='" + custumer.Iban + "'", (new dbConnection()).getConnection())).ExecuteNonQuery();
 
-                
             }
 
 
